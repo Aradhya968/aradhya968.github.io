@@ -99,40 +99,22 @@
         </div>
         <div class="telegram-id-field">
             <label class="telegram-id-label" for="telegram-id">Telegram ID:</label>
-            <input class="telegram-id-input" type="text" id="telegram-id" name="telegram-id" placeholder="Your Telegram Username">
+            <input class="telegram-id-input" type="text" id="telegram-id" name="telegram-id" placeholder="Your Telegram ID" required>
         </div>
     </div>
     
     <script>
         function redirectToPage1() {
             const telegramId = document.getElementById('telegram-id').value;
-            // You can use the telegramId value in your redirection logic.
-            window.location.href = 'https://qropay.com/CustomPayment.php?link_id=19264&telegram_id=' + telegramId;
+            if (telegramId.trim() !== "") {
+                // You can use the telegramId value in your redirection logic.
+                window.location.href = 'https://qropay.com/CustomPayment.php?link_id=19264&telegram_id=' + telegramId;
+            } else {
+                alert("Please enter your Telegram ID.");
+            }
         }
 
-        function redirectToPage2() {
-            const telegramId = document.getElementById('telegram-id').value;
-            // You can use the telegramId value in your redirection logic.
-            window.location.href = 'https://qropay.com/CustomPayment.php?link_id=19261&telegram_id=' + telegramId;
-        }
-
-        function redirectToPage3() {
-            const telegramId = document.getElementById('telegram-id').value;
-            // You can use the telegramId value in your redirection logic.
-            window.location.href = 'https://qropay.com/CustomPayment.php?link_id=19262&telegram_id=' + telegramId;
-        }
-
-        function redirectToPage4() {
-            const telegramId = document.getElementById('telegram-id').value;
-            // You can use the telegramId value in your redirection logic.
-            window.location.href = 'https://qropay.com/CustomPayment.php?link_id=19264&telegram_id=' + telegramId;
-        }
-
-        function redirectToPage5() {
-            const telegramId = document.getElementById('telegram-id').value;
-            // You can use the telegramId value in your redirection logic.
-            window.location.href = 'https://qropay.com/CustomPayment.php?link_id=19263&telegram_id=' + telegramId;
-        }
+        // Add similar validation for other buttons/functions.
     </script>
 </body>
 </html>
