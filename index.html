@@ -78,6 +78,12 @@
             border-radius: 5px;
         }
 
+        .required-asterisk {
+            color: red;
+            font-size: 18px;
+            margin-left: 5px;
+        }
+
         @media screen and (max-width: 600px) {
             .container {
                 padding: 10px;
@@ -98,7 +104,7 @@
             <button class="button" onclick="redirectToPage(5)">Personal Number (with WhatsApp) {Lifetime}</button>
         </div>
         <div class="telegram-id-field">
-            <label class="telegram-id-label" for="telegram-id">Telegram ID:</label>
+            <label class="telegram-id-label" for="telegram-id">Telegram ID<span class="required-asterisk">*</span>:</label>
             <input class="telegram-id-input" type="text" id="telegram-id" name="telegram-id" placeholder="Your Telegram ID" required>
         </div>
     </div>
