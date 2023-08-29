@@ -62,6 +62,22 @@
             height: auto; /* Maintain aspect ratio */
         }
 
+        .telegram-id-field {
+            margin-top: 20px;
+        }
+
+        .telegram-id-label {
+            font-size: 16px;
+        }
+
+        .telegram-id-input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
         @media screen and (max-width: 600px) {
             .container {
                 padding: 10px;
@@ -75,32 +91,47 @@
     </header>
     <div class="container">
         <div class="button-container">
-            <button class="button" onclick="redirectToPage1()">Videocall</button>
-            
+            <button class="button" onclick="redirectToPage1()">Videocall (1 hour)</button>
+            <button class="button" onclick="redirectToPage2()">Videocall (30 minutes)</button>
             <button class="button" onclick="redirectToPage3()">Chat with live nudes</button>
             <button class="button" onclick="redirectToPage4()">Nude videos</button>
             <button class="button" onclick="redirectToPage5()">Personal Number (with WhatsApp) {Lifetime}</button>
         </div>
-        <img class="footer-image" src="banner.png" alt="Footer Image">
+        <div class="telegram-id-field">
+            <label class="telegram-id-label" for="telegram-id">Telegram ID:</label>
+            <input class="telegram-id-input" type="text" id="telegram-id" name="telegram-id" placeholder="Your Telegram Username">
+        </div>
     </div>
     
     <script>
         function redirectToPage1() {
-            window.location.href = 'https://qropay.com/CustomPayment.php?link_id=19264';
+            const telegramId = document.getElementById('telegram-id').value;
+            // You can use the telegramId value in your redirection logic.
+            window.location.href = 'https://qropay.com/CustomPayment.php?link_id=19264&telegram_id=' + telegramId;
         }
 
-        
+        function redirectToPage2() {
+            const telegramId = document.getElementById('telegram-id').value;
+            // You can use the telegramId value in your redirection logic.
+            window.location.href = 'https://qropay.com/CustomPayment.php?link_id=19261&telegram_id=' + telegramId;
+        }
 
         function redirectToPage3() {
-            window.location.href = 'https://qropay.com/CustomPayment.php?link_id=19262';
+            const telegramId = document.getElementById('telegram-id').value;
+            // You can use the telegramId value in your redirection logic.
+            window.location.href = 'https://qropay.com/CustomPayment.php?link_id=19262&telegram_id=' + telegramId;
         }
 
         function redirectToPage4() {
-            window.location.href = 'https://qropay.com/CustomPayment.php?link_id=19264';
+            const telegramId = document.getElementById('telegram-id').value;
+            // You can use the telegramId value in your redirection logic.
+            window.location.href = 'https://qropay.com/CustomPayment.php?link_id=19264&telegram_id=' + telegramId;
         }
 
         function redirectToPage5() {
-            window.location.href = 'https://qropay.com/CustomPayment.php?link_id=19263';
+            const telegramId = document.getElementById('telegram-id').value;
+            // You can use the telegramId value in your redirection logic.
+            window.location.href = 'https://qropay.com/CustomPayment.php?link_id=19263&telegram_id=' + telegramId;
         }
     </script>
 </body>
