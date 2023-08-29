@@ -107,6 +107,7 @@
             <label class="telegram-id-label" for="telegram-id">Telegram ID<span class="required-asterisk">*</span>:</label>
             <input class="telegram-id-input" type="text" id="telegram-id" name="telegram-id" placeholder="Your Telegram ID" required>
         </div>
+        <img class="footer-image" src="banner.png" alt="Footer Image">
     </div>
     
     <script>
@@ -134,17 +135,4 @@
                 window.location.href = url + '&telegram_id=' + telegramId;
             } else {
                 alert("Please enter your Telegram ID.");
-            }
-        }
-
-        function redirectToTipDonation() {
-            const telegramId = document.getElementById('telegram-id').value;
-            if (telegramId.trim() !== "") {
-                window.location.href = 'https://qropay.com/payment.php?pid=2421&telegram_id=' + telegramId;
-            } else {
-                alert("Please enter your Telegram ID.");
-            }
-        }
-    </script>
-</body>
-</html>
+           
