@@ -98,11 +98,10 @@
     <div class="container">
         <div class="button-container">
             <button class="button" onclick="redirectToPage(1)">Videocall </button>
-          
-            <button class="button" onclick="redirectToPage(3)">Chat with live nudes</button>
-            <button class="button" onclick="redirectToPage(4)">Nude videos</button>
-            <button class="button" onclick="redirectToPage(5)">Personal Number (with WhatsApp) {Lifetime}</button>
-            <button class="button" onclick="redirectToTipDonation()">Custom</button>
+            <button class="button" onclick="redirectToPage(2)">Chat with live nudes</button>
+            <button class="button" onclick="redirectToPage(3)">Nude videos</button>
+            <button class="button" onclick="redirectToPage(4)">Personal Number (with WhatsApp) [Lifetime]</button>
+            <button class="button" onclick="redirectToTipDonation()">Tip Donation</button>
         </div>
         <div class="telegram-id-field">
             <label class="telegram-id-label" for="telegram-id">Telegram ID<span class="required-asterisk">*</span>:</label>
@@ -114,8 +113,25 @@
         function redirectToPage(buttonNumber) {
             const telegramId = document.getElementById('telegram-id').value;
             if (telegramId.trim() !== "") {
-                // You can use the telegramId value in your redirection logic.
-                window.location.href = 'https://qropay.com/CustomPayment.php?link_id=1926' + buttonNumber + '&telegram_id=' + telegramId;
+                let url;
+                switch (buttonNumber) {
+                    case 1:
+                        url = 'https://qropay.com/CustomPayment.php?link_id=19260';
+                        break;
+                    case 2:
+                        url = 'https://qropay.com/CustomPayment.php?link_id=19262';
+                        break;
+                    case 3:
+                        url = 'https://qropay.com/CustomPayment.php?link_id=19264';
+                        break;
+                    case 4:
+                        url = 'https://qropay.com/CustomPayment.php?link_id=19263';
+                        break;
+                    default:
+                        url = '#'; // Default URL if buttonNumber is not recognized.
+                        break;
+                }
+                window.location.href = url + '&telegram_id=' + telegramId;
             } else {
                 alert("Please enter your Telegram ID.");
             }
