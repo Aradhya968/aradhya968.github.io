@@ -95,9 +95,10 @@
     <header>
         <h1>Aradhya Paid Subscriptions</h1>
     </header>
+    <img class="footer-image" src="banner.png" alt="Banner Image">
     <div class="container">
         <div class="button-container">
-            <button class="button" onclick="redirectToPage(1)">Videocall</button>
+            <button class="button" onclick="redirectToPage(1)">Videocall </button>
             <button class="button" onclick="redirectToPage(2)">Chat with live nudes</button>
             <button class="button" onclick="redirectToPage(3)">Nude videos</button>
             <button class="button" onclick="redirectToPage(4)">Personal Number (with WhatsApp) [Lifetime]</button>
@@ -107,7 +108,6 @@
             <label class="telegram-id-label" for="telegram-id">Telegram ID<span class="required-asterisk">*</span>:</label>
             <input class="telegram-id-input" type="text" id="telegram-id" name="telegram-id" placeholder="Your Telegram ID" required>
         </div>
-        <img class="footer-image" src="banner.png" alt="Footer Image">
     </div>
     
     <script>
@@ -135,4 +135,17 @@
                 window.location.href = url + '&telegram_id=' + telegramId;
             } else {
                 alert("Please enter your Telegram ID.");
-           
+            }
+        }
+
+        function redirectToTipDonation() {
+            const telegramId = document.getElementById('telegram-id').value;
+            if (telegramId.trim() !== "") {
+                window.location.href = 'https://qropay.com/payment.php?pid=2421&telegram_id=' + telegramId;
+            } else {
+                alert("Please enter your Telegram ID.");
+            }
+        }
+    </script>
+</body>
+</html>
