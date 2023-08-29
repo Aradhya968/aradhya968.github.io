@@ -91,11 +91,11 @@
     </header>
     <div class="container">
         <div class="button-container">
-            <button class="button" onclick="redirectToPage1()">Videocall (1 hour)</button>
-            <button class="button" onclick="redirectToPage2()">Videocall (30 minutes)</button>
-            <button class="button" onclick="redirectToPage3()">Chat with live nudes</button>
-            <button class="button" onclick="redirectToPage4()">Nude videos</button>
-            <button class="button" onclick="redirectToPage5()">Personal Number (with WhatsApp) {Lifetime}</button>
+            <button class="button" onclick="redirectToPage(1)">Videocall (1 hour)</button>
+            <button class="button" onclick="redirectToPage(2)">Videocall (30 minutes)</button>
+            <button class="button" onclick="redirectToPage(3)">Chat with live nudes</button>
+            <button class="button" onclick="redirectToPage(4)">Nude videos</button>
+            <button class="button" onclick="redirectToPage(5)">Personal Number (with WhatsApp) {Lifetime}</button>
         </div>
         <div class="telegram-id-field">
             <label class="telegram-id-label" for="telegram-id">Telegram ID:</label>
@@ -104,17 +104,15 @@
     </div>
     
     <script>
-        function redirectToPage1() {
+        function redirectToPage(buttonNumber) {
             const telegramId = document.getElementById('telegram-id').value;
             if (telegramId.trim() !== "") {
                 // You can use the telegramId value in your redirection logic.
-                window.location.href = 'https://qropay.com/CustomPayment.php?link_id=19264&telegram_id=' + telegramId;
+                window.location.href = 'https://qropay.com/CustomPayment.php?link_id=1926' + buttonNumber + '&telegram_id=' + telegramId;
             } else {
                 alert("Please enter your Telegram ID.");
             }
         }
-
-        // Add similar validation for other buttons/functions.
     </script>
 </body>
 </html>
