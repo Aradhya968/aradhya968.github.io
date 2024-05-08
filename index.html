@@ -1,151 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aradhya Paid Subscriptions</title>
+    <title>Your Ebook Store</title>
     <style>
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #F3EFFF; /* Light purple background */
+            background-color: #f4f4f4;
         }
-
         header {
-            background-color: #7554BF; /* Dark purple header */
+            background-color: #333;
             color: #fff;
             padding: 20px 0;
             text-align: center;
         }
-
         h1 {
             margin: 0;
-            font-size: 24px;
         }
-
         .container {
             max-width: 800px;
             margin: 20px auto;
+            padding: 0 20px;
+        }
+        .ebook {
+            background-color: #fff;
+            border-radius: 5px;
             padding: 20px;
-            background-color: #fff; /* White container background */
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
-        .button-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .ebook h2 {
+            margin-top: 0;
         }
-
-        .button {
-            background-color: #7554BF; /* Dark purple button */
+        .ebook p {
+            margin-top: 10px;
+        }
+        .buy-btn {
+            background-color: #4caf50;
             color: #fff;
             border: none;
             padding: 10px 20px;
-            margin: 10px 0;
+            font-size: 16px;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            font-size: 18px;
         }
-
-        .button:hover {
-            background-color: #57409B; /* Slightly darker purple on hover */
-        }
-
-        .footer-image {
-            display: block;
-            margin: 20px auto; /* Center the image horizontally */
-            max-width: 100%;
-            height: auto; /* Maintain aspect ratio */
-        }
-
-        .telegram-id-field {
-            margin-top: 20px;
-        }
-
-        .telegram-id-label {
-            font-size: 16px;
-        }
-
-        .telegram-id-input {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .required-asterisk {
-            color: red;
-            font-size: 18px;
-            margin-left: 5px;
-        }
-
-        @media screen and (max-width: 600px) {
-            .container {
-                padding: 10px;
-            }
+        .buy-btn:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Aradhya Paid Subscriptions</h1>
+        <h1>Your Ebook Store</h1>
     </header>
-    <img class="footer-image" src="banner.png" alt="Banner Image">
     <div class="container">
-        <div class="button-container">
-            <button class="button" onclick="redirectToPage(1)">Videocall </button>
-            <button class="button" onclick="redirectToPage(2)">Chat with live nudes</button>
-            <button class="button" onclick="redirectToPage(3)">Nude videos</button>
-            <button class="button" onclick="redirectToPage(4)">Personal Number (with WhatsApp) [Lifetime]</button>
-            <button class="button" onclick="redirectToTipDonation()">Tip Donation</button>
+        <div class="ebook">
+            <h2>Ebook Title 1</h2>
+            <p>Description of Ebook 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Price: $10</p>
+            <button class="buy-btn">Buy Now</button>
         </div>
-        <div class="telegram-id-field">
-            <label class="telegram-id-label" for="telegram-id">Telegram ID<span class="required-asterisk">*</span>:</label>
-            <input class="telegram-id-input" type="text" id="telegram-id" name="telegram-id" placeholder="Your Telegram ID/Phone Number" required>
+        <div class="ebook">
+            <h2>Ebook Title 2</h2>
+            <p>Description of Ebook 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Price: $15</p>
+            <button class="buy-btn">Buy Now</button>
         </div>
+        <!-- Add more ebook sections as needed -->
     </div>
-    
-    <script>
-        function redirectToPage(buttonNumber) {
-            const telegramId = document.getElementById('telegram-id').value;
-            if (telegramId.trim() !== "") {
-                let url;
-                switch (buttonNumber) {
-                    case 1:
-                        url = 'https://qropay.com/CustomPayment.php?link_id=19260';
-                        break;
-                    case 2:
-                        url = 'https://qropay.com/CustomPayment.php?link_id=19262';
-                        break;
-                    case 3:
-                        url = 'https://qropay.com/CustomPayment.php?link_id=19264';
-                        break;
-                    case 4:
-                        url = 'https://qropay.com/CustomPayment.php?link_id=19263';
-                        break;
-                    default:
-                        url = '#'; // Default URL if buttonNumber is not recognized.
-                        break;
-                }
-                window.location.href = url + '&telegram_id=' + telegramId;
-            } else {
-                alert("Please enter your Telegram ID.");
-            }
-        }
-
-        function redirectToTipDonation() {
-            const telegramId = document.getElementById('telegram-id').value;
-            if (telegramId.trim() !== "") {
-                window.location.href = 'https://qropay.com/payment.php?pid=2421&telegram_id=' + telegramId;
-            } else {
-                alert("Please enter your Telegram ID.");
-            }
-        }
-    </script>
 </body>
 </html>
