@@ -25,17 +25,17 @@
             margin: 20px auto;
             padding: 0 20px;
         }
-        .section {
+        .ebook, .section {
             background-color: #fff;
             border-radius: 5px;
             padding: 20px;
             margin-bottom: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .section h2 {
+        .ebook h2, .section h2 {
             margin-top: 0;
         }
-        .section p {
+        .ebook p, .section p {
             margin-top: 10px;
         }
         .buy-btn {
@@ -60,13 +60,57 @@
             bottom: 0;
             width: 100%;
         }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Babeeta - Productivity and Time Management Ebooks</h1>
+        <nav>
+            <ul>
+                <li><a href="#ebooks">Ebooks</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+                <li><a href="#privacy-policy">Privacy Policy</a></li>
+                <li><a href="#terms-and-conditions">Terms & Conditions</a></li>
+                <li><a href="#cancellation-refund-policy">Cancellation/Refund Policy</a></li>
+            </ul>
+        </nav>
     </header>
     <div class="container">
+        <div class="section" id="ebooks">
+            <h2>Our Ebooks</h2>
+            <div class="ebook">
+                <h2>Master Your Time: A Guide to Effective Time Management</h2>
+                <p>This ebook provides practical strategies to help you manage your time efficiently, prioritize tasks, and eliminate time-wasting activities.</p>
+                <p>Price: $12</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="ebook">
+                <h2>The Productive Mindset: Cultivating Habits for Success</h2>
+                <p>Learn how to develop a productive mindset, overcome procrastination, and stay focused on your goals.</p>
+                <p>Price: $15</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="ebook">
+                <h2>Efficiency Hacks: Tips and Tricks for Boosting Productivity</h2>
+                <p>Discover practical hacks and techniques to streamline your workflow, increase productivity, and achieve more in less time.</p>
+                <p>Price: $10</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <!-- Add more ebook sections as needed -->
+        </div>
         <div class="section" id="about-us">
             <h2>About Us</h2>
             <p>Babeeta is dedicated to providing high-quality ebooks on productivity and time management. Our author, Babeeta, offers valuable insights and practical advice to help individuals enhance their productivity and achieve their goals. We sell our ebooks online to reach a wider audience and make personal development accessible to all.</p>
