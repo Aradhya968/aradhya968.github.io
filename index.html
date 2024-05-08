@@ -25,17 +25,17 @@
             margin: 20px auto;
             padding: 0 20px;
         }
-        .ebook {
+        .section {
             background-color: #fff;
             border-radius: 5px;
             padding: 20px;
             margin-bottom: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .ebook h2 {
+        .section h2 {
             margin-top: 0;
         }
-        .ebook p {
+        .section p {
             margin-top: 10px;
         }
         .buy-btn {
@@ -51,6 +51,15 @@
         .buy-btn:hover {
             background-color: #45a049;
         }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -58,25 +67,35 @@
         <h1>Babeeta - Productivity and Time Management Ebooks</h1>
     </header>
     <div class="container">
-        <div class="ebook">
-            <h2>Master Your Time: A Guide to Effective Time Management</h2>
-            <p>This ebook provides practical strategies to help you manage your time efficiently, prioritize tasks, and eliminate time-wasting activities.</p>
-            <p>Price: $12</p>
-            <button class="buy-btn">Buy Now</button>
+        <div class="section" id="about-us">
+            <h2>About Us</h2>
+            <p>Babeeta is dedicated to providing high-quality ebooks on productivity and time management. Our author, Babeeta, offers valuable insights and practical advice to help individuals enhance their productivity and achieve their goals. We sell our ebooks online to reach a wider audience and make personal development accessible to all.</p>
         </div>
-        <div class="ebook">
-            <h2>The Productive Mindset: Cultivating Habits for Success</h2>
-            <p>Learn how to develop a productive mindset, overcome procrastination, and stay focused on your goals.</p>
-            <p>Price: $15</p>
-            <button class="buy-btn">Buy Now</button>
+        <div class="section" id="contact-us">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:aradhyabaliyan96@gmail.com">aradhyabaliyan96@gmail.com</a></p>
         </div>
-        <div class="ebook">
-            <h2>Efficiency Hacks: Tips and Tricks for Boosting Productivity</h2>
-            <p>Discover practical hacks and techniques to streamline your workflow, increase productivity, and achieve more in less time.</p>
-            <p>Price: $10</p>
-            <button class="buy-btn">Buy Now</button>
+        <div class="section" id="privacy-policy">
+            <h2>Privacy Policy</h2>
+            <p>Our privacy policy ensures that your personal information remains confidential and is not shared with any third parties without your consent. We prioritize the security and privacy of our customers.</p>
         </div>
-        <!-- Add more ebook sections as needed -->
+        <div class="section" id="terms-and-conditions">
+            <h2>Terms & Conditions</h2>
+            <p>By purchasing and downloading our ebooks, you agree to the following terms and conditions:
+            <ul>
+                <li>All content provided in the ebooks is copyrighted by Babeeta. You are granted a license to use the content for personal use only.</li>
+                <li>Unauthorized distribution, reproduction, or sharing of the ebooks is prohibited.</li>
+                <li>All sales are final. No refunds or cancellations are allowed.</li>
+            </ul>
+            </p>
+        </div>
+        <div class="section" id="cancellation-refund-policy">
+            <h2>Cancellation/Refund Policy</h2>
+            <p>Our ebooks are non-refundable. Once purchased, the sale is final and cannot be canceled or refunded. We appreciate your understanding.</p>
+        </div>
     </div>
+    <footer>
+        &copy; 2024 Babeeta - All Rights Reserved
+    </footer>
 </body>
 </html>
